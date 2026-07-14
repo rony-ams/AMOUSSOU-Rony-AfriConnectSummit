@@ -1,11 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnect Summit 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriConnect Summit 2026 — Inscription & Contact</title>
+  <meta name="description" content="Inscrivez-vous à l'AfriConnect Summit 2026 et contactez l'équipe organisatrice.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 <body>
-    
+
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">AfriConnect <span>Summit 2026</span></a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html" class="active">Inscription</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Basculer le mode sombre / clair">
+            <i class="bi bi-sun"></i>
+          </button>
+          <button class="hamburger" aria-label="Ouvrir le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================= HERO INTERNE ========================= -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Accueil</a> &gt; <span class="current">Contact</span></p>
+        <h1>Inscription & Contact</h1>
+        <p class="section-subtitle">Réservez votre place à Kigali ou posez-nous vos questions.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FORMULAIRE + INFOS ===================== -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Colonne gauche : formulaire -->
+          <div class="contact-form-wrap">
+            <h2 class="section-title" style="font-size:1.6rem;">Formulaire d'inscription</h2>
+
+            <p class="form-success">
+              <i class="bi bi-check-circle"></i>
+              Votre inscription a bien été envoyée ! Nous vous recontacterons rapidement.
+            </p>
+
+            <form id="contact-form" novalidate>
+
+              <div class="form-group">
+                <label for="full-name">Nom complet *</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Ex : Aïcha Koné">
+                <p class="error-message"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Adresse email *</label>
+                <input type="email" id="email" name="email" placeholder="Ex : aicha.kone@email.com">
+                <p class="error-message"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Téléphone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ex : +225 07 00 00 00 00">
+                <p class="error-message"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="participation-type">Type de participation *</label>
+                <select id="participation-type" name="participation-type">
+                  <option value="">-- Choisissez une option --</option>
+                  <option value="participant">Participant(e)</option>
+                  <option value="intervenant">Intervenant(e)</option>
+                  <option value="sponsor">Sponsor / Partenaire</option>
+                  <option value="presse">Presse / Média</option>
+                </select>
+                <p class="error-message"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="country">Pays *</label>
+                <select id="country" name="country">
+                  <option value="">-- Choisissez votre pays --</option>
+                  <option value="senegal">Sénégal</option>
+                  <option value="cote-ivoire">Côte d'Ivoire</option>
+                  <option value="nigeria">Nigeria</option>
+                  <option value="ghana">Ghana</option>
+                  <option value="kenya">Kenya</option>
+                  <option value="rwanda">Rwanda</option>
+                  <option value="maroc">Maroc</option>
+                  <option value="tunisie">Tunisie</option>
+                  <option value="afrique-sud">Afrique du Sud</option>
+                  <option value="guinee">Guinée</option>
+                  <option value="cameroun">Cameroun</option>
+                  <option value="rdc">République Démocratique du Congo</option>
+                </select>
+                <p class="error-message"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message / Motivation *</label>
+                <textarea id="message" name="message" placeholder="Dites-nous en quelques mots pourquoi vous souhaitez participer (20 caractères minimum)"></textarea>
+                <p class="error-message"></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                <i class="bi bi-send"></i> Envoyer mon inscription
+              </button>
+            </form>
+          </div>
+
+          <!-- Colonne droite : informations -->
+          <div class="contact-info-wrap">
+            <div class="info-item">
+              <div class="info-icon"><i class="bi bi-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>contact@africonnectsummit.africa</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="bi bi-telephone"></i></div>
+              <div>
+                <h4>Téléphone</h4>
+                <p>+250 78 000 00 00</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <h4>Lieu</h4>
+                <p>Kigali Convention Centre, KG 2 Roundabout, Kigali, Rwanda</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="bi bi-calendar-event"></i></div>
+              <div>
+                <h4>Dates</h4>
+                <p>18 au 20 novembre 2026</p>
+              </div>
+            </div>
+
+            <!-- Carte Google Maps -->
+            <div class="map-wrap">
+              <iframe
+                src="https://www.google.com/maps?q=Kigali%20Convention%20Centre&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localisation du Kigali Convention Centre">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ EN ACCORDÉON CSS PUR ===================== -->
+    <section class="faq-section">
+      <div class="container">
+        <p class="eyebrow" style="text-align:center; display:block;">Questions fréquentes</p>
+        <h2 class="section-title" style="text-align:center;">FAQ</h2>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-1">
+            <label class="faq-question" for="faq-1">
+              Comment obtenir mon badge d'accès ?
+              <span class="faq-icon"><i class="bi bi-plus"></i></span>
+            </label>
+            <div class="faq-answer">
+              <p>Après validation de votre inscription, un email de confirmation vous sera envoyé avec un QR code à présenter à l'accueil du Kigali Convention Centre.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-2">
+            <label class="faq-question" for="faq-2">
+              Le sommet propose-t-il un tarif étudiant ?
+              <span class="faq-icon"><i class="bi bi-plus"></i></span>
+            </label>
+            <div class="faq-answer">
+              <p>Oui, un tarif réduit est disponible pour les étudiants sur présentation d'une carte étudiante valide lors du retrait du badge.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-3">
+            <label class="faq-question" for="faq-3">
+              Les sessions seront-elles traduites ?
+              <span class="faq-icon"><i class="bi bi-plus"></i></span>
+            </label>
+            <div class="faq-answer">
+              <p>La majorité des sessions se déroulent en français et en anglais, avec une traduction simultanée disponible dans la salle principale.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-4">
+            <label class="faq-question" for="faq-4">
+              Puis-je devenir sponsor de l'événement ?
+              <span class="faq-icon"><i class="bi bi-plus"></i></span>
+            </label>
+            <div class="faq-answer">
+              <p>Bien sûr. Sélectionnez « Sponsor / Partenaire » dans le formulaire d'inscription et notre équipe partenariats vous contactera sous 48h.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-5">
+            <label class="faq-question" for="faq-5">
+              L'hébergement est-il inclus dans l'inscription ?
+              <span class="faq-icon"><i class="bi bi-plus"></i></span>
+            </label>
+            <div class="faq-answer">
+              <p>Non, l'hébergement n'est pas inclus. Une liste d'hôtels partenaires à tarifs préférentiels vous sera communiquée après votre inscription.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>AfriConnect Summit</h4>
+          <p>Le rendez-vous annuel de la tech panafricaine. Kigali, Rwanda — 18 au 20 novembre 2026.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="programme.html">Programme</a></li>
+            <li><a href="intervenants.html">Intervenants</a></li>
+            <li><a href="contact.html">Inscription</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="bi bi-envelope"></i> contact@africonnectsummit.africa</p>
+          <p><i class="bi bi-geo-alt"></i> Kigali Convention Centre, Rwanda</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
+        <p>Site conçu dans le cadre d'un examen de technologies web.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

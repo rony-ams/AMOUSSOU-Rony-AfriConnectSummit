@@ -1,11 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnect Summit 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriConnect Summit 2026 — Accueil</title>
+  <meta name="description" content="AfriConnect Summit 2026, le sommet tech panafricain à Kigali. Développeurs, entrepreneurs et investisseurs du continent.">
+
+  <!-- Polices Google Fonts : une police expressive pour les titres, une lisible pour le corps -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 <body>
-    
+
+  <!-- ============================= NAVBAR ============================= -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">AfriConnect <span>Summit 2026</span></a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Inscription</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Basculer le mode sombre / clair">
+            <i class="bi bi-sun"></i>
+          </button>
+          <button class="hamburger" aria-label="Ouvrir le menu de navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================= HERO ============================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow fade-up">18 – 20 novembre 2026 · Kigali, Rwanda</p>
+          <h1 class="fade-up delay-1">Le sommet tech qui <span class="highlight">connecte</span> l'Afrique qui innove.</h1>
+          <p class="hero-subtitle fade-up delay-2">
+            Trois jours pour réunir <strong>développeurs, entrepreneurs et investisseurs</strong>
+            venus de tout le continent. Conférences, ateliers et rencontres autour de l'IA,
+            du business et du design africains.
+          </p>
+
+          <div class="hero-cta fade-up delay-2">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-ticket-perforated"></i> S'inscrire maintenant</a>
+            <a href="programme.html" class="btn btn-outline"><i class="bi bi-calendar-week"></i> Voir le programme</a>
+          </div>
+
+          <!-- Compte à rebours en temps réel -->
+          <div class="countdown fade-up delay-3">
+            <div class="countdown-item">
+              <span class="countdown-number" id="cd-days">00</span>
+              <span class="countdown-label">Jours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="cd-hours">00</span>
+              <span class="countdown-label">Heures</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="cd-minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="cd-seconds">00</span>
+              <span class="countdown-label">Secondes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION CHIFFRES CLÉS ===================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="1200" data-suffix="+">0</span>
+            <p class="stat-label">Participants</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="48">0</span>
+            <p class="stat-label">Intervenants</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="3">0</span>
+            <p class="stat-label">Jours de conférence</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="12">0</span>
+            <p class="stat-label">Pays représentés</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION POURQUOI PARTICIPER =================== -->
+    <section class="why-section">
+      <div class="container">
+        <p class="eyebrow">Pourquoi venir</p>
+        <h2 class="section-title">Une expérience pensée pour bâtir l'Afrique tech</h2>
+        <p class="section-subtitle">Trois raisons concrètes de réserver votre place à Kigali.</p>
+
+        <div class="reasons">
+          <article class="reason-card reveal">
+            <div class="reason-icon"><i class="bi bi-people"></i></div>
+            <h3>Réseautage continental</h3>
+            <p>Rencontrez des fondateurs, ingénieurs et investisseurs venus de 12 pays africains en trois jours seulement.</p>
+          </article>
+          <article class="reason-card reveal">
+            <div class="reason-icon"><i class="bi bi-lightbulb"></i></div>
+            <h3>Contenu de haut niveau</h3>
+            <p>Des conférences et ateliers pratiques sur l'IA, la data, le design et l'entrepreneuriat, animés par des experts du terrain.</p>
+          </article>
+          <article class="reason-card reveal">
+            <div class="reason-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <h3>Opportunités concrètes</h3>
+            <p>Sessions de pitch, espace investisseurs et mise en relation directe avec des fonds actifs sur le continent.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION INTERVENANTS VEDETTES ================= -->
+    <section class="speakers-section">
+      <div class="container">
+        <p class="eyebrow">Ils seront à Kigali</p>
+        <h2 class="section-title">Intervenants vedettes</h2>
+        <p class="section-subtitle">Un aperçu des experts qui monteront sur scène en novembre.</p>
+
+        <div class="speakers-grid">
+          <article class="speaker-card reveal">
+            <img class="speaker-photo" src="https://i.pravatar.cc/400?img=47" alt="Portrait d'Amina Diallo, fondatrice IA santé">
+            <div class="speaker-info">
+              <h3>Amina Diallo</h3>
+              <p class="speaker-role">Fondatrice, IA & Santé</p>
+              <p class="speaker-country"><i class="bi bi-geo-alt"></i> Guinée</p>
+            </div>
+          </article>
+          <article class="speaker-card reveal">
+            <img class="speaker-photo" src="https://i.pravatar.cc/400?img=32" alt="Portrait de Fatou Ndiaye, investisseuse business angel">
+            <div class="speaker-info">
+              <h3>Fatou Ndiaye</h3>
+              <p class="speaker-role">Business Angel</p>
+              <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+            </div>
+          </article>
+          <article class="speaker-card reveal">
+            <img class="speaker-photo" src="https://i.pravatar.cc/400?img=44" alt="Portrait de Layla El Amrani, design lead">
+            <div class="speaker-info">
+              <h3>Layla El Amrani</h3>
+              <p class="speaker-role">Design Lead</p>
+              <p class="speaker-country"><i class="bi bi-geo-alt"></i> Maroc</p>
+            </div>
+          </article>
+          <article class="speaker-card reveal">
+            <img class="speaker-photo" src="https://i.pravatar.cc/400?img=45" alt="Portrait de Grace Mwangi, chief data officer">
+            <div class="speaker-info">
+              <h3>Grace Mwangi</h3>
+              <p class="speaker-role">Chief Data Officer</p>
+              <p class="speaker-country"><i class="bi bi-geo-alt"></i> Kenya</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-footer-action">
+          <a href="intervenants.html" class="btn btn-outline">Voir tous les intervenants <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= SECTION SPONSORS ========================= -->
+    <section class="sponsors-section">
+      <div class="container">
+        <p class="eyebrow">Ils nous soutiennent</p>
+        <h2 class="section-title">Nos partenaires</h2>
+
+        <div class="sponsors-tiers">
+          <div class="sponsor-tier">
+            <p class="sponsor-tier-label">Partenaires Or</p>
+            <div class="sponsor-row gold">
+              <div class="sponsor-logo">Baobab Tech</div>
+              <div class="sponsor-logo">Kora Capital</div>
+            </div>
+          </div>
+          <div class="sponsor-tier">
+            <p class="sponsor-tier-label">Partenaires Argent</p>
+            <div class="sponsor-row silver">
+              <div class="sponsor-logo">Sankofa Cloud</div>
+              <div class="sponsor-logo">Zuri Bank</div>
+              <div class="sponsor-logo">Nova Telecom</div>
+            </div>
+          </div>
+          <div class="sponsor-tier">
+            <p class="sponsor-tier-label">Partenaires Bronze</p>
+            <div class="sponsor-row bronze">
+              <div class="sponsor-logo">Jengo Studio</div>
+              <div class="sponsor-logo">Pili Media</div>
+              <div class="sponsor-logo">Tembo Labs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>AfriConnect Summit</h4>
+          <p>Le rendez-vous annuel de la tech panafricaine. Kigali, Rwanda — 18 au 20 novembre 2026.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="programme.html">Programme</a></li>
+            <li><a href="intervenants.html">Intervenants</a></li>
+            <li><a href="contact.html">Inscription</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="bi bi-envelope"></i> contact@africonnectsummit.africa</p>
+          <p><i class="bi bi-geo-alt"></i> Kigali Convention Centre, Rwanda</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
+        <p>Site conçu dans le cadre d'un examen de technologies web.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
