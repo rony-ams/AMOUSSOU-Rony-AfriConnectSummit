@@ -14,6 +14,7 @@ AFRICONNECT SUMMIT 2026 — CSS OPTIMISÉ
 --border: #322b25;
 --primary: #e8973d;
 --secondary: #1b7a6b;
+--Rony: #0f57c4;
 --accent: #d1573f;
 --font-display: 'Bricolage Grotesque', sans-serif;
 --font-body: 'Inter', sans-serif;
@@ -59,7 +60,7 @@ display:inline-block;
 font-size:.8rem;
 letter-spacing:.12em;
 text-transform:uppercase;
-color:var(--primary);
+color:var(--Rony);
 font-weight:600;
 margin-bottom:.75rem;
 }
