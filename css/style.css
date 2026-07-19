@@ -503,3 +503,232 @@ font-size:1.1rem;
 box-shadow:var(--shadow);
 }
 .back-to-top.visible { opacity:1; visibility:visible; transform:translateY(0); }
+/* --------------------------------------------------------------------------
+10. ANIMATIONS AU SCROLL
+-------------------------------------------------------------------------- */
+.reveal {
+opacity:0;
+transform:translateY(30px);
+transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.zoom { transform:scale(.92); }
+.reveal.slide-left { transform:translateX(-40px); }
+.reveal.slide-right { transform:translateX(40px); }
+.reveal.is-visible {
+opacity:1;
+transform:translate(0,0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+11. PROGRAMME — ONGLETS
+-------------------------------------------------------------------------- */
+.tabs {
+display:flex;
+gap:.8rem;
+margin-bottom:2.5rem;
+flex-wrap:wrap;
+}
+.tab-btn {
+padding:.75rem 1.6rem;
+border-radius:999px;
+border:1px solid var(--border);
+background:var(--bg-card);
+color:var(--text-muted);
+cursor:pointer;
+font-weight:600;
+font-size:.9rem;
+transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.tab-btn:hover { border-color:var(--primary); }
+.tab-btn.active {
+background:var(--primary);
+color:#100e0c;
+border-color:var(--primary);
+}
+.tab-panel { display:none; }
+.tab-panel.active {
+display:block;
+animation:fadeUp .5s ease both;
+}
+.schedule-table {
+width:100%;
+border-collapse:collapse;
+overflow:hidden;
+border-radius:var(--radius);
+border:1px solid var(--border);
+}
+.schedule-table th,
+.schedule-table td {
+padding:1rem 1.2rem;
+text-align:left;
+font-size:.92rem;
+}
+.schedule-table thead {
+background:var(--primary);
+color:#100e0c;
+}
+.schedule-table thead th { font-family:var(--font-display); font-weight:700; }
+.schedule-table tbody tr {
+background:var(--bg-card);
+border-top:1px solid var(--border);
+}
+.schedule-table tbody tr:nth-child(even) { background:var(--bg-alt); }
+.schedule-table tbody tr:hover { background:rgba(232,151,61,0.08); }
+
+/* --------------------------------------------------------------------------
+12. CONTACT — FORMULAIRE & FAQ
+-------------------------------------------------------------------------- */
+.contact-layout {
+display:flex;
+gap:3.5rem;
+flex-wrap:wrap;
+}
+.contact-form-wrap {
+flex:1 1 480px;
+background:var(--bg-card);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:2.5rem;
+}
+.contact-info-wrap { flex:1 1 320px; }
+.form-group { margin-bottom:1.4rem; }
+.form-group label {
+display:block;
+font-size:.88rem;
+font-weight:600;
+margin-bottom:.5rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+width:100%;
+padding:.85rem 1rem;
+border-radius:var(--radius-sm);
+border:1.5px solid var(--border);
+background:var(--bg);
+color:var(--text);
+font-size:.92rem;
+transition:border-color var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+outline:none;
+border-color:var(--primary);
+}
+.form-group textarea {
+resize:vertical;
+min-height:110px;
+}
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea { border-color:var(--accent); }
+.form-group.success input,
+.form-group.success select,
+.form-group.success textarea { border-color:var(--secondary); }
+.error-message {
+display:none;
+color:var(--accent);
+font-size:.8rem;
+margin-top:.4rem;
+}
+.form-group.error .error-message { display:block; }
+.form-success {
+display:none;
+background:rgba(27,122,107,0.12);
+border:1px solid var(--secondary);
+color:var(--secondary);
+padding:1rem 1.2rem;
+border-radius:var(--radius-sm);
+margin-bottom:1.4rem;
+font-size:.9rem;
+font-weight:600;
+}
+.form-success.visible { display:block; }
+.contact-info-wrap .info-item {
+display:flex;
+gap:1rem;
+margin-bottom:1.8rem;
+}
+.contact-info-wrap .info-icon {
+width:42px;
+height:42px;
+border-radius:50%;
+background:rgba(232,151,61,0.12);
+color:var(--primary);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+.contact-info-wrap h4 { font-size:.95rem; margin-bottom:.2rem; }
+.contact-info-wrap p { color:var(--text-muted); font-size:.88rem; }
+.map-wrap {
+margin-top:2.5rem;
+border-radius:var(--radius);
+overflow:hidden;
+border:1px solid var(--border);
+}
+.map-wrap iframe {
+width:100%;
+height:320px;
+border:0;
+display:block;
+}
+
+/* FAQ Accordéon CSS pur */
+.faq-list { max-width:780px; margin:0 auto; }
+.faq-item { border-bottom:1px solid var(--border); }
+.faq-item input[type="checkbox"] { display:none; }
+.faq-question {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1.4rem 0;
+cursor:pointer;
+font-weight:600;
+font-family:var(--font-display);
+}
+.faq-question .faq-icon {
+transition:transform var(--transition);
+color:var(--primary);
+}
+.faq-answer {
+max-height:0;
+overflow:hidden;
+transition: max-height .35s ease, padding var(--transition);
+color:var(--text-muted);
+font-size:.92rem;
+}
+.faq-item input[type="checkbox"]:checked ~ .faq-answer {
+max-height:220px;
+padding-bottom:1.4rem;
+}
+.faq-item input[type="checkbox"]:checked ~ .faq-question .faq-icon { transform:rotate(45deg); }
+
+/* --------------------------------------------------------------------------
+13. FILTRES INTERVENANTS
+-------------------------------------------------------------------------- */
+.filters {
+display:flex;
+gap:.8rem;
+flex-wrap:wrap;
+margin-bottom:2.8rem;
+}
+.filter-btn {
+padding:.65rem 1.4rem;
+border-radius:999px;
+border:1px solid var(--border);
+background:transparent;
+color:var(--text-muted);
+cursor:pointer;
+font-size:.88rem;
+font-weight:500;
+transition:all var(--transition);
+}
+.filter-btn:hover { border-color:var(--primary); color:var(--text); }
+.filter-btn.active {
+background:var(--secondary);
+border-color:var(--secondary);
+color:#fff;
+}
