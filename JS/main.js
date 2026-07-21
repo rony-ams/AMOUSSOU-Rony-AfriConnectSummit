@@ -182,4 +182,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-}
+  /* ------------------------------------------------------------------
+     7. ANIMATIONS AU SCROLL (fade-in / slide-in / zoom-in)
+     ------------------------------------------------------------------ */
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     8. ONGLETS DU PROGRAMME (page programme.html)
+     ------------------------------------------------------------------ */
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+
+  tabButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const targetTab = button.getAttribute("data-tab");
+
+      // On désactive tous les onglets et panneaux
+      tabButtons.forEach(function (btn) { btn.classList.remove("active"); });
+      tabPanels.forEach(function (panel) { panel.classList.remove("active"); });
+
+      // On active seulement l'onglet cliqué et son panneau correspondant
+      button.classList.add("active");
+      document.getElementById(targetTab).classList.add("active");
+    });
+  });
+
+  /* ------------------------------------------------------------------
+     9. FILTRAGE DYNAMIQUE DES INTERVENANTS (page intervenants.html)
+     ------------------------------------------------------------------ */
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const speakerCards = document.querySelectorAll(".speaker-card");
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const filterValue = button.getAttribute("data-filter");
+
+      filterButtons.forEach(function (btn) { btn.classList.remove("active"); });
+      button.classList.add("active");
+
+      speakerCards.forEach(function (card) {
+        const category = card.getAttribute("data-category");
+        if (filterValue === "tous" || category === filterValue) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  });
