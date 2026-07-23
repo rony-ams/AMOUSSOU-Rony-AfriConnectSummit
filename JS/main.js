@@ -245,3 +245,133 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  /* ------------------------------------------------------------------
+     10. VALIDATION DU FORMULAIRE DE CONTACT (page contact.html)
+     ------------------------------------------------------------------ */
+  const contactForm = document.getElementById("contact-form");
+
+  if (contactForm) {
+    const successMessage = document.querySelector(".form-success");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let isFormValid = true;
+
+      // Champ : nom complet (requis)
+      isFormValid = validateRequired("full-name", "Veuillez entrer votre nom complet.") && isFormValid;
+
+      // Champ : email (requis + format valide)
+      isFormValid = validateEmail("email") && isFormValid;
+
+      // Champ : téléphone (requis + minimum 8 chiffres)
+      isFormValid = validatePhone("phone") && isFormValid;
+
+      // Champ : type de participation (requis)
+      isFormValid = validateRequired("participation-type", "Veuillez choisir un type de participation.") && isFormValid;
+
+      // Champ : pays (requis)
+      isFormValid = validateRequired("country", "Veuillez choisir votre pays.") && isFormValid;
+
+      // Champ : message (requis + minimum 20 caractères)
+      isFormValid = validateMessage("message") && isFormValid;
+
+      if (isFormValid) {
+        successMessage.classList.add("visible");
+        contactForm.reset();
+        // On enlève les classes de succès visuelles après réinitialisation
+        contactForm.querySelectorAll(".form-group").forEach(function (group) {
+          group.classList.remove("success", "error");
+        });
+        // Le message de succès disparaît après quelques secondes
+        setTimeout(function () {
+          successMessage.classList.remove("visible");
+        }, 5000);
+      } else {
+        successMessage.classList.remove("visible");
+      }
+    });
+
+    // Vérifie qu'un champ requis n'est pas vide
+    function validateRequired(id, errorText) {
+      const field = document.getElementById(id);
+      const group = field.closest(".form-group");
+      const errorEl = group.querySelector(".error-message");
+
+      if (field.value.trim() === "") {
+        setError(group, errorEl, errorText);
+        return false;
+      }
+      setSuccess(group);
+      return true;
+    }
+
+    // Vérifie le format de l'email avec une expression régulière
+    function validateEmail(id) {
+      const field = document.getElementById(id);
+      const group = field.closest(".form-group");
+      const errorEl = group.querySelector(".error-message");
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (field.value.trim() === "") {
+        setError(group, errorEl, "Veuillez entrer votre adresse email.");
+        return false;
+      }
+      if (!emailRegex.test(field.value.trim())) {
+        setError(group, errorEl, "Veuillez entrer une adresse email valide.");
+        return false;
+      }
+      setSuccess(group);
+      return true;
+    }
+
+    // Vérifie que le téléphone contient au moins 8 chiffres
+    function validatePhone(id) {
+      const field = document.getElementById(id);
+      const group = field.closest(".form-group");
+      const errorEl = group.querySelector(".error-message");
+      const digitsOnly = field.value.replace(/\D/g, "");
+
+      if (field.value.trim() === "") {
+        setError(group, errorEl, "Veuillez entrer votre numéro de téléphone.");
+        return false;
+      }
+      if (digitsOnly.length < 8) {
+        setError(group, errorEl, "Le numéro doit contenir au moins 8 chiffres.");
+        return false;
+      }
+      setSuccess(group);
+      return true;
+    }
+
+    // Vérifie que le message contient au moins 20 caractères
+    function validateMessage(id) {
+      const field = document.getElementById(id);
+      const group = field.closest(".form-group");
+      const errorEl = group.querySelector(".error-message");
+
+      if (field.value.trim() === "") {
+        setError(group, errorEl, "Veuillez entrer un message.");
+        return false;
+      }
+      if (field.value.trim().length < 20) {
+        setError(group, errorEl, "Votre message doit contenir au moins 20 caractères.");
+        return false;
+      }
+      setSuccess(group);
+      return true;
+    }
+
+    function setError(group, errorEl, message) {
+      group.classList.add("error");
+      group.classList.remove("success");
+      errorEl.textContent = message;
+    }
+
+    function setSuccess(group) {
+      group.classList.remove("error");
+      group.classList.add("success");
+    }
+  }
+
+});
