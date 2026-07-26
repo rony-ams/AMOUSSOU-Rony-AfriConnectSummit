@@ -36,7 +36,7 @@
   --bg: #faf7f2;
   --bg-alt: #ffffff;
   --bg-card: #ffffff;
-  --text: #211c18;
+  --text: #8ebcdf;
   --text-muted: #5b5349;
   --border: #e7e0d6;
   --shadow: 0 10px 30px rgba(20,15,10,0.08);
@@ -50,7 +50,7 @@ html { scroll-behavior:smooth; }
 body {
   font-family: var(--font-body);
   /* background: var(--bg); */
-  background: linear-gradient(100deg, var(--rose), var(--primary),var(--rouge),var(--violet),var(--jaune));
+  background: linear-gradient(10deg, var(--vert),var(--text), var(--violet));
   color: var(--text);
   line-height:1.6;
   transition: background var(--transition), color var(--transition);
@@ -198,8 +198,8 @@ section { padding:6rem 0; }
   position:relative;
   padding-top:6rem;
   background:
-    radial-gradient(circle at 85% 15%, rgba(232,151,61,0.14), transparent 45%),
-    radial-gradient(circle at 10% 85%, rgba(27,122,107,0.16), transparent 45%);
+    radial-gradient(circle at 85% 15%, rgba(223, 10, 227, 0.886), transparent 45%),
+    radial-gradient(circle at 10% 85%, rgba(5, 178, 241, 0.941), transparent 45%);
 }
 .hero::before {
   content:"";
@@ -440,8 +440,79 @@ section { padding:6rem 0; }
 /* --------------------------------------------------------------------------
    9. FOOTER
    -------------------------------------------------------------------------- */
+  .site-footer {
+  /* Force les couleurs du footer à rester fixes */
+  background: #091c29 !important;
+  border-top: 1px solid #1a2a3a !important;
+}
+
+.site-footer * {
+  /* Tous les enfants du footer héritent des couleurs du footer */
+  color: inherit !important;
+}
+
+.site-footer h4 {
+  color: #f5f0e8 !important;
+}
+
+.site-footer p,
+.site-footer li,
+.site-footer a {
+  color: #b8afa3 !important;
+}
+
+.site-footer a:hover {
+  color: #1075e8 !important;
+}
+
+.site-footer .social-icons a {
+  border-color: #1a2a3a !important;
+}
+
+.site-footer .social-icons a:hover {
+  background: #1075e8 !important;
+  color: #100e0c !important;
+}
+
+.site-footer .footer-bottom {
+  border-top-color: #1a2a3a !important;
+  color: #7a6f63 !important;
+}
+
+/* Même en mode light, le footer reste sombre */
+[data-theme="light"] .site-footer {
+  background: #091c29 !important;
+  border-top-color: #1a2a3a !important;
+}
+
+[data-theme="light"] .site-footer * {
+  color: inherit !important;
+}
+
+[data-theme="light"] .site-footer h4 {
+  color: #f5f0e8 !important;
+}
+
+[data-theme="light"] .site-footer p,
+[data-theme="light"] .site-footer li,
+[data-theme="light"] .site-footer a {
+  color: #b8afa3 !important;
+}
+
+[data-theme="light"] .site-footer a:hover {
+  color: #1075e8 !important;
+}
+
+[data-theme="light"] .site-footer .social-icons a {
+  border-color: #1a2a3a !important;
+}
+
+[data-theme="light"] .site-footer .footer-bottom {
+  border-top-color: #1a2a3a !important;
+  color: #7a6f63 !important;
+}
 .site-footer {
-  background:var(--foot);
+  background:var(--foot) ;
   border-top:1px solid var(--border);
   padding:4.5rem 0 2rem;
 }
