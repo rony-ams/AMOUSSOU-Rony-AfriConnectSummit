@@ -50,7 +50,7 @@ html { scroll-behavior:smooth; }
 body {
   font-family: var(--font-body);
   /* background: var(--bg); */
-  background: linear-gradient(10deg, var(--vert),var(--text), var(--violet));
+  background: linear-gradient(90deg, var(--bleu),var(--violet));
   color: var(--text);
   line-height:1.6;
   transition: background var(--transition), color var(--transition);
